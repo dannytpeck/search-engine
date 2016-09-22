@@ -1,6 +1,5 @@
 def add_to_index(index, keyword, url):
-    for entry in index:
-        if entry[0] == keyword:
-            entry[1].append(url)
-            return
-    index.append([keyword, [url]])
+    if keyword in index:
+        index[keyword].append(url)
+    else:
+        index[keyword] = [url]

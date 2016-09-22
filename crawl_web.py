@@ -6,7 +6,7 @@ from get_all_links import get_all_links
 def crawl_web(seed):
     tocrawl = [seed]
     crawled = []
-    index = []
+    index = {}
     while tocrawl:
         page = tocrawl.pop()
         if page not in crawled:
